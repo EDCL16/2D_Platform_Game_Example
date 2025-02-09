@@ -6,7 +6,8 @@ public class EndPoint : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("You Win");
+            SceneChangeManager sceneChangeManager = FindFirstObjectByType<SceneChangeManager>();
+            sceneChangeManager.ChangeScene("LevelSelect");
         }
     }
 }
