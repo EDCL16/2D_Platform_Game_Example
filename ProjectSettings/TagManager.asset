@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,12 +14,12 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
+  - EnemyhitBox
+  - Item
+  - Weapon
   - 
   - 
   - 
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Item
     uniqueID: 4277541459
+    locked: 0
+  - name: Weapon
+    uniqueID: 3040098195
     locked: 0
   - name: Effect
     uniqueID: 3851566521
