@@ -26,9 +26,11 @@ public class EnemyController : MonoBehaviour
         // 檢測懸崖：從 groundDetection 位置往下發射一條 raycast
         RaycastHit2D groundHit = Physics2D.Raycast(groundDetection.position, Vector2.down, groundDetectionDistance);
         // 當下方沒有檢測到物件，或檢測到的物件 tag 不是 "ground" 時，代表遇到懸崖
-        if (groundHit.collider == null || !groundHit.collider.CompareTag("Ground"))
+        bool hasCilff = groundHit.collider == null;
+        if (hasCilff)
         {
             Flip();
+            return;
         }
 
         // 檢測前方障礙：從 frontDetection 位置往前發射 raycast（方向依據目前移動方向）
@@ -52,7 +54,8 @@ public class EnemyController : MonoBehaviour
         // 反轉移動方向
         direction *= -1;
         // 反轉 Sprite：通過改變 x 軸縮放值
-        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+        //GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     // 在 Scene 視窗中繪製 raycast 的檢測線，方便除錯

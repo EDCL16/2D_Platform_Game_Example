@@ -6,7 +6,7 @@ public class MenuButton : MonoBehaviour
     public void StartGame()
     {
         SceneChangeManager sceneChangeManager = GetComponent<SceneChangeManager>();
-        sceneChangeManager.ChangeScene("Level");
+        sceneChangeManager.ChangeScene();
     }
     public void ExitGame()
     {

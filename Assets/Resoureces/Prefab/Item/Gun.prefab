@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aeac5e360008824fabeece5acae5c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3725209593360010227}
+  bulletPrefab: {fileID: 5368813430046994587, guid: 8c0c7930238ab4347a9b09a89ff72d4d, type: 3}
   firePoint: {fileID: 7667805854491675657}
   playerPickupDistance: 1.5
 --- !u!1 &7087570087315706924
