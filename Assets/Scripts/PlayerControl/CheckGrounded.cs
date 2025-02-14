@@ -8,12 +8,14 @@ public class CheckGrounded : MonoBehaviour
     {
         return isGrounded;
     }
-    public void PlayerJumped()
-    {
-        isGrounded = false;
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {

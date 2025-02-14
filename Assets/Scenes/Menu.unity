@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70659a8b97e80204590a6657b508036e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level
+  sceneName: LevelSelect
 --- !u!224 &902596416 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1857012725749886600, guid: c69b03cd78be77e4d8e8f5fa30b529b4, type: 3}

@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && checkGrounded.IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            checkGrounded.PlayerJumped();
         }
     }
     void FixedUpdate() // 處理物理移動
